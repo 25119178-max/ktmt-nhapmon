@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Học Tập Là Chìa Khóa Thành Công</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #quote {
+      font-size: 1.4em;
+      margin: 20px auto;
+      max-width: 600px;
+      color: #34495e;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e8449;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📚 Truyền Cảm Hứng Học Tập 📚</h1>
+  <div id="quote">Nhấn vào nút bên dưới để nhận một câu nói hay về học tập!</div>
+  <button onclick="showQuote()">Hiển thị câu nói</button>
+
+  <footer>Hãy học mỗi ngày để tiến gần hơn đến ước mơ của bạn!</footer>
+
+  <script>
+    const quotes = [
+      "Học vấn không có trên đường phố, mà phải đi vào thư viện.",
+      "Giáo dục là vũ khí mạnh nhất bạn có thể dùng để thay đổi thế giới. – Nelson Mandela",
+      "Không có thang máy đến thành công – bạn phải đi cầu thang bộ.",
+      "Người học nhiều sẽ thấy mình biết ít.",
+      "Chỉ cần mỗi ngày học một chút, sau một năm bạn sẽ đi rất xa.",
+      "Tri thức là kho báu, nhưng thực hành là chìa khóa để mở nó ra.",
+      "Học không bao giờ là đủ – hãy giữ tinh thần học hỏi suốt đời.",
+      "Thành công là kết quả của sự chuẩn bị, chăm chỉ và học hỏi từ thất bại.",
+      "Sự học như con thuyền ngược nước, không tiến ắt phải lùi.",
+      "Người thành công là người không bao giờ ngừng học hỏi."
+    ];
+
+    function showQuote() {
+      const index = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[index];
+    }
+  </script>
+
+</body>
+</html>
