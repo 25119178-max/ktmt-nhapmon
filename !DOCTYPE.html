@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Động Viên Tinh Thần</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        #quote {
+            font-size: 1.5em;
+            margin: 20px;
+            color: #34495e;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌟 Lời Động Viên Mỗi Ngày 🌟</h1>
+    <div id="quote">Hãy nhấn nút để nhận một lời động viên nhé!</div>
+    <button onclick="showQuote()">Hiển thị lời động viên</button>
+
+    <script>
+        const quotes = [
+            "Bạn mạnh mẽ hơn những gì bạn nghĩ.",
+            "Mỗi ngày là một cơ hội mới để bắt đầu lại.",
+            "Khó khăn chỉ là tạm thời, kiên trì là mãi mãi.",
+            "Hãy tin vào chính mình và không gì là không thể.",
+            "Thành công bắt đầu từ một thái độ tích cực.",
+            "Bạn xứng đáng với những điều tốt đẹp.",
+            "Chỉ cần bạn không bỏ cuộc, bạn sẽ không thất bại.",
+            "Hôm nay cố gắng, ngày mai thành công.",
+            "Cứ đi rồi sẽ đến. Cứ cố gắng rồi sẽ thành công.",
+            "Một nụ cười có thể thay đổi cả một ngày."
+        ];
+
+        function showQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
