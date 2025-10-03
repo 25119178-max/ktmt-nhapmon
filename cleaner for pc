@@ -1,0 +1,19 @@
+@echo off
+title Clean Temporary Files & Recycle Bin
+echo Clearing temporary files and Recycle Bin...
+
+REM Delete temporary files in the user's profile
+del "%userprofile%\local settings\temp\*.*" /q /s /f
+del "%userprofile%\AppData\Local\Temp\*.*" /q /s /f
+
+REM Delete temporary internet files
+del "%userprofile%\local settings\temporary internet files\*.*" /q /s /f
+
+REM Delete Prefetch files (some may not be deleted as they are in use)
+del "%systemroot%\Prefetch\*.*" /q /s
+
+REM Empty the Recycle Bin
+rd /s /q "%systemroot%\System32\RecycleBin"
+
+echo Cleanup complete. Press any key to exit.
+pause
